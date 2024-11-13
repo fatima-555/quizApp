@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <!-- ======Firebase Database Link====== -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+  <!-- <script type="module" src="app.js" defer></script> -->
+        <title>Quiz App</title>
+    </head>
+    <body onload="nextQuestion()">
+
+        <div class="container">
+        <div class="heading">
+            <h1 style="font-size: 30px;text-align: center;">Quiz App</h1>
+        </div>
+        <div class="questions">
+            <p id="ques"></p>
+            <input
+                value="1"
+                onclick="clicked()"
+                type="radio"
+                class="options"
+                name="options"
+                id=""
+            >
+            <label id="opt1" for=""></label>
+            <br>
+            <br>
+            <input
+                value="2"
+                onclick="clicked()"
+                type="radio"
+                class="options"
+                name="options"
+                id=""
+            >
+            <label id="opt2" for=""></label>
+            <br>
+            <br>
+            <input
+                value="3"
+                onclick="clicked()"
+                type="radio"
+                class="options"
+                name="options"
+                id=""
+            >
+            <label id="opt3" for=""></label>
+            <br>
+            <br>
+            <button id="btn" disabled onclick="nextQuestion()">Next</button>
+        </div>
+        <div class="timer">
+            <h1 id="timer" style="text-align: center;">2:00</h1>
+        </div>
+    </div>
+
+    <!-- login -->
+
+    <h1>Login</h1>
+    <input id="Loginemail" type="text" placeholder="Enter email">
+    <br><br>
+    <input id="Loginpassword" type="text" placeholder="Enter password">
+    <br><br>
+    <button onclick="login()">Login</button>
+
+    <!-- signup -->
+
+    <h1>SignUp</h1>
+    <input id="name" type="text" placeholder="Enter name">
+    <br><br>
+    <input id="email" type="text" placeholder="Enter email">
+    <br><br>
+    <input id="password" type="text" placeholder="Enter password">
+    <br><br>
+    <button onclick="signup()">Signup</button>
+
+        <script src="app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+</html>
